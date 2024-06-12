@@ -568,10 +568,10 @@ application-dev.yml
 ```yaml
 sky:
   alioss:
-    endpoint: oss-cn-hangzhou.aliyuncs.com
-    access-key-id: xxx
-    access-key-secret: xxx
-    bucket-name: sky-take-out
+    endpoint: <endpoint>
+    access-key-id: <access-key-id>
+    access-key-secret: <access-key-secret>
+    bucket-name: <bucket-name>
 ```
 
 application.yml
