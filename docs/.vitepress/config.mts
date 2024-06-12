@@ -78,40 +78,48 @@ export default defineConfig({
        */
       label: "大纲",
     },
+
+    sidebar: [
+      { text: "苍穹外卖-day01", link: "/day01" },
+      { text: "苍穹外卖-day02", link: "/day02" },
+      { text: "苍穹外卖-day03", link: "/day03" },
+      { text: "苍穹外卖-day05", link: "/day05" },
+      { text: "苍穹外卖-day06", link: "/day06" },
+      { text: "苍穹外卖-day07", link: "/day07" },
+      { text: "苍穹外卖-day08", link: "/day08" },
+      { text: "苍穹外卖-day10", link: "/day10" },
+      { text: "苍穹外卖-day11", link: "/day11" },
+      { text: "苍穹外卖-day12", link: "/day12" },
+    ],
   },
   vite: {
-    plugins: [
-      // https://github.com/QC2168/vite-plugin-vitepress-auto-sidebar
-      AutoSidebar({
-        ignoreList: ["/public/", "assets", "img", "demo"],
-        titleFromFile: true,
-        // 侧边栏排序
-        beforeCreateSideBarItems: (data: string[]): string[] => {
-          // console.log(data);
-
-          // 通过正则提取文件名中的数字
-          function getOrder(item: string): number {
-            if (item == "index.md") {
-              return 0;
-            }
-
-            let res = item.match(/(?<order>\d+)/);
-
-            if (res && res.groups) {
-              return parseInt(res.groups.order);
-            } else {
-              return 999;
-            }
-          }
-
-          data.sort((a, b) => {
-            return getOrder(a) - getOrder(b);
-          });
-
-          return data.filter((n) => n != ".DS_Store");
-        },
-      }),
-    ],
+    // plugins: [
+    //   // https://github.com/QC2168/vite-plugin-vitepress-auto-sidebar
+    //   AutoSidebar({
+    //     ignoreList: ["/public/", "assets", "img", "demo"],
+    //     titleFromFile: true,
+    //     // 侧边栏排序
+    //     beforeCreateSideBarItems: (data: string[]): string[] => {
+    //       // console.log(data);
+    //       // 通过正则提取文件名中的数字
+    //       function getOrder(item: string): number {
+    //         if (item == "index.md") {
+    //           return 0;
+    //         }
+    //         let res = item.match(/(?<order>\d+)/);
+    //         if (res && res.groups) {
+    //           return parseInt(res.groups.order);
+    //         } else {
+    //           return 999;
+    //         }
+    //       }
+    //       data.sort((a, b) => {
+    //         return getOrder(a) - getOrder(b);
+    //       });
+    //       return data.filter((n) => n != ".DS_Store");
+    //     },
+    //   }),
+    // ],
   },
   docFooter: {
     prev: "上一页",
