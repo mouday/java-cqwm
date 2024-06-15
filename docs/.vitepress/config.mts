@@ -90,6 +90,7 @@ export default defineConfig({
       { text: "苍穹外卖-day10", link: "/day10" },
       { text: "苍穹外卖-day11", link: "/day11" },
       { text: "苍穹外卖-day12", link: "/day12" },
+      { text: "苍穹外卖-数据库设计", link: "/database" },
     ],
   },
   vite: {
