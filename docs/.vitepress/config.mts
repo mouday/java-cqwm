@@ -91,6 +91,7 @@ export default defineConfig({
       { text: "苍穹外卖-day11", link: "/day11" },
       { text: "苍穹外卖-day12", link: "/day12" },
       { text: "苍穹外卖-数据库设计", link: "/database" },
+      { text: "苍穹外卖-建表语句", link: "/database/sky-sql" },
     ],
   },
   vite: {
